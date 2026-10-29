@@ -2,7 +2,7 @@
 const STORAGE_KEY = 'birthday_config';
 
 let config = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
-  name: 'Friend',
+  name: 'Debbie',
   birthday: getTodayString() // defaults to today so timer starts immediately
 };
 
