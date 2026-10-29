@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Letter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Letter -->
+    <div class="envelope-wrapper">
+        <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="letter">
+                <div class="letter-header">
+                    <span class="stamp"><i class="fa-solid fa-cake-candles"></i></span>
+                    <p class="date" id="current-date"></p>
+                </div>
+
+                <h1 class="greeting">
+                    Happy Birthday, <span id="name">Debbie</span>!
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                </h1>
+
+                <p class="body-text">
+                    Today is not just another day — it's the day the universe decided the world needed you in it,
+                    and honestly? Best decision ever. <i class="fa-solid fa-star"></i> From the very first moment
+                    you came into this world, you've been leaving little sparks of joy everywhere you go, in the
+                    hearts of everyone lucky enough to know you.
+                </p>
+
+                <p class="body-text">
+                    Another trip around the sun, and what a beautiful journey it's been. Every laugh shared,
+                    every memory made, every silly moment and every deep conversation — they all add up to
+                    something truly irreplaceable. You have a way of making ordinary days feel like something
+                    worth celebrating, just by being yourself. <i class="fa-solid fa-heart"></i>
+                </p>
+
+                <p class="body-text">
+                    So today, we pause everything just to celebrate you — your kindness, your warmth, your wild
+                    laugh, and that beautiful soul of yours. May this birthday bring you all the things you've
+                    quietly wished for, and may the year ahead surprise you in the most wonderful ways.
+                    You deserve every single candle on that cake, every hug, every song, and every sweet bite.
+                    <i class="fa-solid fa-cake-candles"></i>
+                </p>
+
+                <p class="body-text">
+                    Here's to you — growing, glowing, and getting better with every year. Never stop being
+                    exactly who you are, because the world is genuinely better with you in it.
+                    Happy Birthday, and may today feel as magical as you make every day feel for the rest of us.
+                    <i class="fa-solid fa-balloon"></i>
+                </p>
+
+                <div class="countdown-section">
+                    <p class="countdown-label">
+                        <i class="fa-solid fa-balloon"></i> Time Since Midnight on Your Birthday
+                    </p>
+                    <div class="countdown" id="countdown">
+                        <div class="time-block">
+                            <span id="hours">00</span>
+                            <label>Hours</label>
+                        </div>
+                        <div class="sep">:</div>
+                        <div class="time-block">
+                            <span id="minutes">00</span>
+                            <label>Minutes</label>
+                        </div>
+                        <div class="sep">:</div>
+                        <div class="time-block">
+                            <span id="seconds">00</span>
+                            <label>Seconds</label>
+                        </div>
+                    </div>
+                    <p class="countdown-sub" id="countdown-sub"></p>
+                </div>
+
+                <p class="sign-off">With love &amp; cake,</p>
+                <p class="signature" style="font-family: Georgia, 'Times New Roman', Times, serif;">Eric <i
+                        class="fa-solid fa-heart"></i></p>
+
+                <!--
+                  BACKGROUND AUDIO
+                  Set src below to your audio file, e.g. src="audio/song.mp3"
+                -->
+                <audio id="birthday-audio" loop preload="auto">
+                    <source src="./audio/b-day-song.mp3" type="audio/mp3" />
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memories Section -->
+    <!-- 
+    HOW TO ADD YOUR PHOTOS:
+    1. Put your image files in an "images/" folder next to index.html
+    2. Set src="images/your-photo.jpg" on each <img class="card-img">
+    3. Update the alt text and caption for each card
+  -->
+    <section class="memories-section">
+        <div class="memories-header">
+            <i class="fa-solid fa-heart"></i>
+            <h2>Our Favorite Memories</h2>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+        <p class="memories-subtitle"><i class="fa-solid fa-camera"></i> A little look back at us</p>
+
+        <div class="cards-grid">
+
+            <div class="memory-card">
+                <div class="card-photo-area">
+                    <!-- Replace src with your image path, e.g. src="images/photo1.jpg" -->
+                    <img class="card-img" src="./images/d1.jpeg" alt="memory 1" />
+                    <div class="card-placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <span>images/photo1.jpg</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-caption"></p>
+                    <span class="card-decor">🎀</span>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-photo-area">
+                    <img class="card-img" src="" alt="memory 2" />
+                    <div class="card-placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <span>images/photo2.jpg</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-caption">Your caption here ✨</p>
+                    <span class="card-decor">🌸</span>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-photo-area">
+                    <img class="card-img" src="" alt="memory 3" />
+                    <div class="card-placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <span>images/photo3.jpg</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-caption">Your caption here ✨</p>
+                    <span class="card-decor">🎂</span>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-photo-area">
+                    <img class="card-img" src="" alt="memory 4" />
+                    <div class="card-placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <span>images/photo4.jpg</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-caption">Your caption here ✨</p>
+                    <span class="card-decor">🥳</span>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-photo-area">
+                    <img class="card-img" src="" alt="memory 5" />
+                    <div class="card-placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <span>images/photo5.jpg</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-caption">Your caption here ✨</p>
+                    <span class="card-decor">🌷</span>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-photo-area">
+                    <img class="card-img" src="" alt="memory 6" />
+                    <div class="card-placeholder">
+                        <i class="fa-solid fa-image"></i>
+                        <span>images/photo6.jpg</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-caption">Your caption here ✨</p>
+                    <span class="card-decor">✨</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Floating music button -->
+    <button class="music-btn" id="music-btn" aria-label="Toggle music">
+        <i class="fa-solid fa-music" id="music-icon"></i>
+        <span class="music-btn-label" id="music-label">Tap to play</span>
+    </button>
+
+    <!-- Config bar -->
+    <div class="config-bar">
+        <input type="text" id="name-input" placeholder="Enter name..." maxlength="30" />
+        <input type="date" id="birthday-input" />
+        <button id="apply-btn"><i class="fa-solid fa-pen"></i> Update</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
